@@ -40,22 +40,22 @@ if __name__ == "__main__":
             if line.startswith('#'):
                 if ol_visited:
                     html_file.write('</ol>\n')
-                ol_visited = False
+                    ol_visited = False
                 if ul_visited:
                     html_file.write('</ul>\n')
-                ul_visited = False
+                    ul_visited = False
                 if para_visited:
                     html_file.write('</p>\n')
-                para_visited = False
+                    para_visited = False
                 out = '<h{}>{}</h{}>\n'.format(targ_num, text, targ_num)
                 html_file.write(out)
             if line.startswith('-'):
                 if ol_visited:
                     html_file.write('</ol>\n')
-                ol_visited = False
+                    ol_visited = False
                 if para_visited:
                     html_file.write('</p>\n')
-                para_visited = False
+                    para_visited = False
                 if not ul_visited:
                     html_file.write('<ul>\n')
                     ul_visited = True
@@ -64,10 +64,10 @@ if __name__ == "__main__":
             if line.startswith('*'):
                 if ul_visited:
                     html_file.write('</ul>\n')
-                ul_visited = False
+                    ul_visited = False
                 if para_visited:
                     html_file.write('</p>\n')
-                para_visited = False
+                    para_visited = False
                 if not ol_visited:
                     html_file.write('<ol>\n')
                     ol_visited = True
@@ -76,10 +76,10 @@ if __name__ == "__main__":
             if not line.startswith(('#', '-', '*')):
                 if ul_visited:
                     html_file.write('</ul>\n')
-                ul_visited = False
+                    ul_visited = False
                 if ol_visited:
                     html_file.write('</ol>\n')
-                ol_visited = False
+                    ol_visited = False
                 if not para_visited:
                     html_file.write('<p>\n')
                     para_visited = True
