@@ -28,6 +28,7 @@ if __name__ == "__main__":
     ul_visited = False
     ol_visited = False
     para_visited = False
+    capital = False
     with open(argv[2], 'w') as html_file:
         for line in md:
             line_split = line.split()
@@ -95,10 +96,9 @@ if __name__ == "__main__":
                     html_file.write('<p>\n')
                     para_visited = True
                 if line_split[0][0].isupper():
-                    html_file.write('{}</p>\n'.format(line))
-                    para_visited = False
-                # else:
-                # html_file.write('<br />\n{}'.format(line))
+                    html_file.write(line)
+                else:
+                    html_file.write('<br />\n{}'.format(line))
         if ul_visited:
             html_file.write('</ul>\n')
         if ol_visited:
