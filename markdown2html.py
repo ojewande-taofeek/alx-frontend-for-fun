@@ -36,15 +36,17 @@ if __name__ == "__main__":
                     targ_num = len(line_split[0])
                     text = line[targ_num + 1: -1]
             except IndexError:
-                if ol_visited:
-                    html_file.write('</ol>\n')
-                    ol_visited = False
-                if ul_visited:
-                    html_file.write('</ul>\n')
-                    ul_visited = False
-                if para_visited:
-                    html_file.write('</p>\n')
-                    para_visited = False
+                """
+                    if ol_visited:
+                        html_file.write('</ol>\n')
+                        ol_visited = False
+                    if ul_visited:
+                        html_file.write('</ul>\n')
+                        ul_visited = False
+                    if para_visited:
+                        html_file.write('</p>\n')
+                        para_visited = False
+                """
                 continue
             if line.startswith('#'):
                 if ol_visited:
@@ -93,9 +95,10 @@ if __name__ == "__main__":
                     html_file.write('<p>\n')
                     para_visited = True
                 if line_split[0][0].isupper():
-                    html_file.write(line)
-                else:
-                    html_file.write('<br />\n{}'.format(line))
+                    html_file.write('{}</p>\n'.format(line))
+                    para_visited = False
+                # else:
+                # html_file.write('<br />\n{}'.format(line))
         if ul_visited:
             html_file.write('</ul>\n')
         if ol_visited:
