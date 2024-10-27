@@ -629,7 +629,7 @@
     }
 
     .post-content p:first-child {
-      font-size: var(--font-size-large);
+      font-size: var(--font-size-x-large);
     }
 
     .post-content .img-caption {
