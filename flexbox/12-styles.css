@@ -564,15 +564,15 @@
   /* Post
     ============================= */
 
-    .post {
-      display: flex;
-    }
+  .post {
+    display: flex;
+  }
 
-    .post-content {
-      width: 100%;
-    }
+  .post-content {
+    width: 100%;
+  }
 
-    .post-aside {
-      order: -1;
-      min-width: 20%;
-    }
+  .post-aside {
+    order: -1;
+    min-width: 20%;
+  }
