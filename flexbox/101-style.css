@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+.container {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    height: 30vh;
+    font-size: 90px;
+    color: white;
+    justify-content: center;
+}
+
+
+.box1,
+.box5 {
+    flex-grow: 1;
+    height: 10vh;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30%;
+}
+
+.box2,
+.box4 {
+    background-color: blue;
+    flex-grow: 2;
+    height: 20vh;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60%;
+}
+
+.box3 {
+    background-color: rgb(94, 94, 127);
+    flex-grow: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100%;
+}
+
+.box1 {
+    background: greenyellow;
+}
+
+.box2 {
+    background: rgb(67, 67, 140);
+}
+
+
+.box4 {
+    background: purple;
+}
+
+.box5 {
+    background: orange;
+}
